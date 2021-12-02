@@ -29,6 +29,7 @@ aside {
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: repeat(2, auto);
+    align-items: center;
 }
 .person > img {
     border: solid white;
@@ -38,11 +39,17 @@ aside {
 }
 .person-label {
     color: hsl(236, 100%, 87%);
+    font-size: 0.75em;
+    align-self: flex-end;
+}
+.person-name {
+    align-self: flex-start;
 }
 .timeframe {
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    font-size: 0.75em;
 }
 .timeframe a {
     display: block;
@@ -55,28 +62,37 @@ aside {
 .timeframe .timeframe-active {
     color: white;
 }
-#work {
-    background: hsl(15, 100%, 70%) url(./images/icon-work.svg) no-repeat top right;
-}
-#play {
-    background: hsl(195, 74%, 62%) url(./images/icon-play.svg) top right no-repeat;
-}
-#study {
-    background: hsl(348, 100%, 68%) url(./images/icon-study.svg) no-repeat top right;
-}
-#exercise {
-    background: hsl(145, 58%, 55%) url(./images/icon-exercise.svg) no-repeat top right;
-}
-#social {
-    background: hsl(264, 64%, 52%) url(./images/icon-social.svg) no-repeat top right;
-}
-#self-care {
-    background: hsl(43, 84%, 65%) url(./images/icon-self-care.svg) no-repeat top right;
-}
 section {
-    padding-top: 30px;
+    background-size: 50px;
+    background-position: 95% -5px;
+    background-repeat: no-repeat;
+    padding-top: 25px;
     border-radius: 10px;
     display: grid;
+}
+#work {
+    background-color: hsl(15, 100%, 70%);
+    background-image: url(./images/icon-work.svg);
+}
+#play {
+    background-color: hsl(195, 74%, 62%);
+    background-image: url(./images/icon-play.svg);
+}
+#study {
+    background-color: hsl(348, 100%, 68%);
+    background-image: url(./images/icon-study.svg);
+}
+#exercise {
+    background-color: hsl(145, 58%, 55%);
+    background-image: url(./images/icon-exercise.svg);
+}
+#social {
+    background-color: hsl(264, 64%, 52%);
+    background-image: url(./images/icon-social.svg);
+}
+#self-care {
+    background-color: hsl(43, 84%, 65%);
+    background-image: url(./images/icon-self-care.svg);
 }
 section > div {
     background-color: hsl(235, 46%, 20%);
@@ -114,7 +130,7 @@ section > div > header::after {
         grid-template-columns: repeat(4, 250px);
         grid-template-rows: repeat(2, 220px);
         gap: 30px;
-        padding: 150px 120px;
+        /*padding: 150px 120px;*/
     }
     aside {
         grid-row: span 2;
@@ -127,9 +143,17 @@ section > div > header::after {
     .person > img {
         grid-row: auto;
     }
+    .person-name {
+        font-size: 2em;
+    }
     .timeframe {        
         padding: 30px;
         flex-direction: column;
+        font-size: 1em;
+    }
+    section {
+        background-size: 70px;
+        padding-top: 40px;
     }
     section > div {
         padding: 30px;
