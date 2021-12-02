@@ -8,73 +8,102 @@
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link href="./styles.css" rel="stylesheet">
+  <script src="./script.js"></script>
 </head>
 <body>
+  <div id="wrapper">
+    <aside>
+      <div class="person">
+        <img src="./images/image-jeremy.png" alt="Jeremy" />
+        <div class="person-label">Report for</div>
+        <div class="person-name">Jeremy Robson</div>
+      </div>
+    
+      <div class="timeframe">
+        <a href="#" onclick="onTimeFrameClick(this, 'daily')">Daily</a>
+        <a href="#" onclick="onTimeFrameClick(this, 'weekly')" class="timeframe-active">Weekly</a>
+        <a href="#" onclick="onTimeFrameClick(this, 'monthly')">Monthly</a>
+      </div>
+    </aside>
 
-  Report for
-  Jeremy Robson
+    <section id="work">
+      <div>
+        <header>Work</header>
+        <div class="current daily">5hrs</div>
+        <div class="previous daily">Yesyerday - 7hrs</div>
+        <div class="current weekly timeframe-active">32hrs</div>
+        <div class="previous weekly timeframe-active">Last week - 36hrs</div>
+        <div class="current monthly">103hrs</div>
+        <div class="previous monthly">Last month - 128hrs</div>
+      </div>
+    </section>
 
-  Daily
-  Weekly
-  Monthly
+    <section id="play">
+      <div>
+        <header>Play</header>
+        <div class="current daily">1hr</div>
+        <div class="previous daily">Yesyerday - 2hrs</div>
+        <div class="current weekly timeframe-active">10hrs</div>
+        <div class="previous weekly timeframe-active">Last week - 8hrs</div>
+        <div class="current monthly">23hrs</div>
+        <div class="previous monthly">Last month - 29hrs</div>
+      </div>
+    </section>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+    <section id="study">
+      <div>
+        <header>Study</header>
+        <div class="current daily">0hrs</div>
+        <div class="previous daily">Yesyerday - 1hr</div>
+        <div class="current weekly timeframe-active">4hrs</div>
+        <div class="previous weekly timeframe-active">Last week - 7hrs</div>
+        <div class="current monthly">13hrs</div>
+        <div class="previous monthly">Last month - 19hrs</div>
+      </div>
+    </section>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+    <section id="exercise">
+      <div>
+        <header>Exercise</header>
+        <div class="current daily">1hr</div>
+        <div class="previous daily">Yesyerday - 1hr</div>
+        <div class="current weekly timeframe-active">4hrs</div>
+        <div class="previous weekly timeframe-active">Last week - 5hrs</div>
+        <div class="current monthly">11hrs</div>
+        <div class="previous monthly">Last month - 18hrs</div>
+      </div>
+    </section>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+    <section id="social">
+      <div>
+        <header>Social</header>
+        <div class="current daily">1hr</div>
+        <div class="previous daily">Yesyerday - 3hrs</div>
+        <div class="current weekly timeframe-active">5hrs</div>
+        <div class="previous weekly timeframe-active">Last week - 10hrs</div>
+        <div class="current monthly">21hrs</div>
+        <div class="previous monthly">Last month - 23hrs</div>
+      </div>
+    </section>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
+    <section id="self-care">
+      <div>
+        <header>Self Care</header>
+        <div class="current daily">0hrs</div>
+        <div class="previous daily">Yesyerday - 1hr</div>
+        <div class="current weekly timeframe-active">2hrs</div>
+        <div class="previous weekly timeframe-active">Last week - 2hrs</div>
+        <div class="current monthly">7hrs</div>
+        <div class="previous monthly">Last month - 11hrs</div>
+      </div>
+    </section>
+  </div>
 
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Nadine</a>.
   </div>
 </body>
 </html>

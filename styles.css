@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+body {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: white;
+    background-color: hsl(226, 43%, 10%);
+    display: grid;
+}
+#wrapper {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-rows: repeat(7, auto);
+    gap: 20px;
+    padding: 50px 20px;
+}
+aside {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 1fr;
+}
+.person {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(2, auto);
+}
+.person > img {
+    border: solid white;
+    border-radius: 100%;
+    width: 60px;
+    grid-row: span 2;
+}
+.person-label {
+    color: hsl(236, 100%, 87%);
+}
+.timeframe {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.timeframe a {
+    display: block;
+    color: hsl(235, 45%, 61%);
+    text-decoration: none;
+}
+.timeframe a:hover {
+    color: white;
+}
+.timeframe .timeframe-active {
+    color: white;
+}
+#work {
+    background: hsl(15, 100%, 70%) url(./images/icon-work.svg) no-repeat top right;
+}
+#play {
+    background: hsl(195, 74%, 62%) url(./images/icon-play.svg) top right no-repeat;
+}
+#study {
+    background: hsl(348, 100%, 68%) url(./images/icon-study.svg) no-repeat top right;
+}
+#exercise {
+    background: hsl(145, 58%, 55%) url(./images/icon-exercise.svg) no-repeat top right;
+}
+#social {
+    background: hsl(264, 64%, 52%) url(./images/icon-social.svg) no-repeat top right;
+}
+#self-care {
+    background: hsl(43, 84%, 65%) url(./images/icon-self-care.svg) no-repeat top right;
+}
+section {
+    padding-top: 30px;
+    border-radius: 10px;
+    display: grid;
+}
+section > div {
+    background-color: hsl(235, 46%, 20%);
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    justify-content: space-between;
+}
+section > div > header {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+}
+section > div > header::after {
+    content: url(./images/icon-ellipsis.svg);
+}
+.current {
+    font-size: 1.5em;
+}
+.previous {
+    color: hsl(236, 100%, 87%);
+    font-size: 0.7em;
+}
+.daily, .weekly, .monthly {
+    display: none;
+}
+.timeframe-active {
+    display: block;
+}
+@media (min-width: 1200px) {
+    #wrapper {
+        grid-template-columns: repeat(4, 250px);
+        grid-template-rows: repeat(2, 220px);
+        gap: 30px;
+        padding: 150px 120px;
+    }
+    aside {
+        grid-row: span 2;
+    }
+    .person {
+        padding: 30px;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, auto);
+    }
+    .person > img {
+        grid-row: auto;
+    }
+    .timeframe {        
+        padding: 30px;
+        flex-direction: column;
+    }
+    section > div {
+        padding: 30px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+    }
+    section > div > header {
+        grid-column: span 1;
+    }
+    .current {
+        font-size: 2.5em;
+    }
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
