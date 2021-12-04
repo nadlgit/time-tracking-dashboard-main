@@ -130,7 +130,6 @@ section > div > header::after {
         grid-template-columns: repeat(4, 250px);
         grid-template-rows: repeat(2, 220px);
         gap: 30px;
-        /*padding: 150px 120px;*/
     }
     aside {
         grid-row: span 2;
