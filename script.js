@@ -12,7 +12,7 @@ function onTimeFrameClick (clickedElem, newTimeFrame) {
 }
 
 function loadJSON () {
-    const jsonDataURL = 'https://nadlgit.github.io/time-tracking-dashboard-main/data.json';
+    const jsonDataURL = './data.json';
     fetch(jsonDataURL)
     .then(response => response.json())
     .then(jsonData => {
